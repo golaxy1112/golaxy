@@ -1,0 +1,35 @@
+spring:
+  elasticsearch:
+    rest:
+      uris: 10.20.8.31:9200
+configBean:
+  indexName: instance1
+  limitSchemaId: 100
+  limitRelationNode: 100
+neo4jConfig:
+  uri: bolt+routing://graph.neo4j.com
+  serveraddress: 10.20.8.31:7687,10.20.8.32:7687,10.20.8.33:7687
+  username: neo4j
+  password: 123456
+logging:
+  level.*: debug
+
+# 第三方rest相关配置
+my-rest:
+  # 最大超时时间
+  rest_max_time: 5000
+  schema: http://10.20.8.32:5512/kg-admin/schema/v1.0/
+  ustore: http://10.20.8.33:6100/store/v3.0/1j_instance_test/
+  ustore2: http://10.20.8.33:6100/store/v3.0/1j_db_yjl/
+
+#dubbo:
+#  application:
+#    name: kg-instance-service-provider
+#  registry:
+#    address: 10.20.8.32:2181
+#    protocol: zookeeper
+#  protocol:
+#    name: dubbo
+#    port: 7001
+#  monitor:
+#    protocol: registry

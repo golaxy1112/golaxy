@@ -1,0 +1,14 @@
+# 端口和前缀配置
+server:
+  port: 7100
+  servlet:
+    context-path: /template/v1.0
+
+# 模式和日志路径配置
+spring:
+  profiles:
+    active: dev
+  application:
+    log_path: D:\2
+
+

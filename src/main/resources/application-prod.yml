@@ -1,0 +1,40 @@
+logging:
+  level.*: debug
+
+# es config
+spring:
+  elasticsearch:
+    rest:
+      uris: 10.20.8.31:9200
+#      uris: 10.208.62.1:9201,10.208.62.3:9201,10.208.62.21:9201
+configBean:
+  indexName: instance_db
+  limitSchemaId: 1000
+  limitRelationNode: 1000
+
+# neo4j config
+# standalone mode
+neo4jConfig:
+  uri: bolt://10.20.8.35:47687
+  serveraddress: 10.20.8.35:47687
+  username: neo4j
+  password: 123456
+
+# Cluster mode
+#neo4jConfig:
+#  uri: bolt+routing://graph.neo4j.com
+#  serveraddress: 10.208.62.1:7687,10.208.62.3:7687,10.208.62.21:7687
+#  username: neo4j
+#  password: 123456
+
+# 第三方rest相关配置
+my-rest:
+  # 最大超时时间
+  rest_max_time: 5000
+  schema: http://10.20.8.33:5510/kg-admin/schema/v1.0/
+  ustore: http://10.20.8.33:6101/store/v3.0/1j_749_instance/
+  ustore2: http://10.20.8.33:6101/store/v3.0/1j_db_new/
+
+#  schema: http://10.208.62.1:5510/kg-admin/schema/v1.0/
+#  ustore: http://10.208.62.1:6101/store/v3.0/1j_749_instance/
+#  ustore2: http://10.208.62.1:6101/store/v3.0/1j_db_new/
